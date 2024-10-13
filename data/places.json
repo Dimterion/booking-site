@@ -1,0 +1,72 @@
+[
+  {
+    "$id": "1",
+    "user_id": "1",
+    "name": "Lorem Ipsum",
+    "description": "",
+    "sq": 1000,
+    "capacity": 100,
+    "location": "",
+    "address": "Lorem Ipsum 1",
+    "amenities": "",
+    "availability": "9 AM - 5 PM",
+    "price_per_hour": 100,
+    "image": "placeholder_img.jpg"
+  },
+  {
+    "$id": "2",
+    "user_id": "1",
+    "name": "Lorem Ipsum Dolor",
+    "description": "",
+    "sq": 500,
+    "capacity": 10,
+    "location": "",
+    "address": "Lorem Ipsum 2",
+    "amenities": "",
+    "availability": "8 AM - 6 PM",
+    "price_per_hour": 50,
+    "image": "placeholder_img.jpg"
+  },
+  {
+    "$id": "3",
+    "user_id": "1",
+    "name": "Lorem Ipsum",
+    "description": "",
+    "sq": 500,
+    "capacity": 15,
+    "location": "",
+    "address": "Lorem Ipsum 3",
+    "amenities": "",
+    "availability": "10 AM - 4 PM",
+    "price_per_hour": 150,
+    "image": "placeholder_img.jpg"
+  },
+  {
+    "$id": "4",
+    "user_id": "2",
+    "name": "Lorem Ipsum Dolor",
+    "description": "",
+    "sq": 1500,
+    "capacity": 50,
+    "location": "",
+    "address": "Lorem Ipsum 4",
+    "amenities": "",
+    "availability": "9 AM - 6 PM",
+    "price_per_hour": 100,
+    "image": "placeholder_img.jpg"
+  },
+  {
+    "$id": "5",
+    "user_id": "2",
+    "name": "Lorem Ipsum",
+    "description": "",
+    "sq": 200,
+    "capacity": 10,
+    "location": "",
+    "address": "Lorem Ipsum 5",
+    "amenities": "",
+    "availability": "7 AM - 7 PM",
+    "price_per_hour": 50,
+    "image": "placeholder_img.jpg"
+  }
+]
