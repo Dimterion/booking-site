@@ -26,13 +26,13 @@ const Header = () => {
                   Places
                 </Link>
                 <Link
-                  href="/"
+                  href="/bookings"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
                 >
                   Bookings
                 </Link>
                 <Link
-                  href="/"
+                  href="/places/add"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
                 >
                   Add Place
@@ -42,16 +42,25 @@ const Header = () => {
           </div>
           <div className="ml-auto">
             <div className="ml-4 flex items-center md:ml-6">
-              <Link href="/" className="mr-3 text-gray-800 hover:text-gray-600">
+              <Link
+                href="/login"
+                className="mr-3 text-gray-800 hover:text-gray-600"
+              >
                 <FaSignInAlt className="mr-1 inline" /> Login
               </Link>
-              <Link href="/" className="mr-3 text-gray-800 hover:text-gray-600">
+              <Link
+                href="/register"
+                className="mr-3 text-gray-800 hover:text-gray-600"
+              >
                 <FaUser className="mr-1 inline" /> Register
               </Link>
-              <Link href="/">
+              <Link href="/places/my">
                 <FaCompass className="mr-1 inline" /> My Places
               </Link>
-              <Link href="/" className="mx-3 text-gray-800 hover:text-gray-600">
+              <Link
+                href="/login"
+                className="mx-3 text-gray-800 hover:text-gray-600"
+              >
                 <FaSignOutAlt className="mr-1 inline" /> Sign Out
               </Link>
             </div>
@@ -67,13 +76,13 @@ const Header = () => {
             Places
           </Link>
           <Link
-            href="/"
+            href="/bookings"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
           >
             Bookings
           </Link>
           <Link
-            href="/"
+            href="/places/add"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
           >
             Add Place
