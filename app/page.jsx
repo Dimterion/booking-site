@@ -1,8 +1,10 @@
 import Heading from "@/components/Heading";
 import PlaceCard from "@/components/PlaceCard";
-import places from "@/data/places.json";
+import getAllPlaces from "./actions/getAllPlaces";
 
-export default function Home() {
+export default async function Home() {
+  const places = await getAllPlaces();
+
   return (
     <>
       <Heading title="Available places" />
