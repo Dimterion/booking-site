@@ -3,11 +3,11 @@ import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
 import Heading from "@/components/Heading";
 import BookingForm from "@/components/BookingForm";
-import places from "@/data/places.json";
+import getPlace from "@/app/actions/getPlace";
 
-const PlacePage = ({ params }) => {
+const PlacePage = async ({ params }) => {
   const { id } = params;
-  const place = places.find((place) => place.$id === id);
+  const place = await getPlace(id);
 
   if (!place) {
     return <Heading title="Place not found" />;
