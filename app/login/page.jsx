@@ -1,10 +1,21 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect } from "react";
+import { useFormState } from "react-dom";
+import createSession from "../actions/createSession";
 
 const LoginPage = () => {
+  const [state, formAction] = useFormState(createSession, {});
+
+  useEffect(() => {
+    if (state.error) console.log(state.error);
+  }, [state]);
+
   return (
     <div className="flex items-center justify-center">
       <div className="mt-20 w-full max-w-sm rounded-lg bg-white p-6 shadow-lg">
-        <form>
+        <form action={formAction}>
           <h2 className="mb-6 text-center text-2xl font-bold text-gray-800">
             Login
           </h2>
