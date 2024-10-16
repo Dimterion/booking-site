@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,9 +8,21 @@ import logo from "@/assets/images/logo.png";
 import { FaUser, FaSignInAlt, FaSignOutAlt, FaCompass } from "react-icons/fa";
 import { toast } from "react-toastify";
 import deleteSession from "@/app/actions/deleteSession";
+import checkAuth from "@/app/actions/checkAuth";
 
 const Header = () => {
   const router = useRouter();
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
+
+  useEffect(() => {
+    const fetchAuthStatus = async () => {
+      const result = await checkAuth();
+
+      setIsAuthenticated(result.isAuthenticated);
+    };
+
+    fetchAuthStatus();
+  }, []);
 
   const handleLogout = async () => {
     const { success, error } = await deleteSession();
@@ -42,44 +55,56 @@ const Header = () => {
                 >
                   Places
                 </Link>
-                <Link
-                  href="/bookings"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-                >
-                  Bookings
-                </Link>
-                <Link
-                  href="/places/add"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-                >
-                  Add Place
-                </Link>
+                {isAuthenticated && (
+                  <>
+                    <Link
+                      href="/bookings"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                    >
+                      Bookings
+                    </Link>
+                    <Link
+                      href="/places/add"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                    >
+                      Add Place
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </div>
           <div className="ml-auto">
             <div className="ml-4 flex items-center md:ml-6">
-              <Link
-                href="/login"
-                className="mr-3 text-gray-800 hover:text-gray-600"
-              >
-                <FaSignInAlt className="mr-1 inline" /> Login
-              </Link>
-              <Link
-                href="/register"
-                className="mr-3 text-gray-800 hover:text-gray-600"
-              >
-                <FaUser className="mr-1 inline" /> Register
-              </Link>
-              <Link href="/places/my">
-                <FaCompass className="mr-1 inline" /> My Places
-              </Link>
-              <button
-                onClick={handleLogout}
-                className="mx-3 text-gray-800 hover:text-gray-600"
-              >
-                <FaSignOutAlt className="mr-1 inline" /> Sign Out
-              </button>
+              {!isAuthenticated && (
+                <>
+                  <Link
+                    href="/login"
+                    className="mr-3 text-gray-800 hover:text-gray-600"
+                  >
+                    <FaSignInAlt className="mr-1 inline" /> Login
+                  </Link>
+                  <Link
+                    href="/register"
+                    className="mr-3 text-gray-800 hover:text-gray-600"
+                  >
+                    <FaUser className="mr-1 inline" /> Register
+                  </Link>
+                </>
+              )}
+              {isAuthenticated && (
+                <>
+                  <Link href="/places/my">
+                    <FaCompass className="mr-1 inline" /> My Places
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="mx-3 text-gray-800 hover:text-gray-600"
+                  >
+                    <FaSignOutAlt className="mr-1 inline" /> Sign Out
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -92,18 +117,22 @@ const Header = () => {
           >
             Places
           </Link>
-          <Link
-            href="/bookings"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-          >
-            Bookings
-          </Link>
-          <Link
-            href="/places/add"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-          >
-            Add Place
-          </Link>
+          {isAuthenticated && (
+            <>
+              <Link
+                href="/bookings"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+              >
+                Bookings
+              </Link>
+              <Link
+                href="/places/add"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+              >
+                Add Place
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>
