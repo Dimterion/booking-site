@@ -1,4 +1,5 @@
 import Heading from "@/components/Heading";
+import MyPlaceCard from "@/components/MyPlaceCard";
 import getMyPlaces from "@/app/actions/getMyPlaces";
 
 const MyPlacesPage = async () => {
@@ -8,7 +9,7 @@ const MyPlacesPage = async () => {
     <>
       <Heading title="My places" />
       {places.length > 0
-        ? places.map((place) => <h3 key={place.$id}>{place.name}</h3>)
+        ? places.map((place) => <MyPlaceCard key={place.$id} place={place} />)
         : "You have no listings."}
     </>
   );
