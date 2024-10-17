@@ -1,11 +1,30 @@
+"use client";
+
+import { useEffect } from "react";
+import { useFormState } from "react-dom";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 import Heading from "@/components/Heading";
+import createPlace from "@/app/actions/createPlace";
 
 const AddPlacePage = () => {
+  const [state, formAction] = useFormState(createPlace, {});
+  const router = useRouter();
+
+  useEffect(() => {
+    if (state.error) toast.error(state.error);
+    if (state.success) {
+      toast.success("Place created successfully.");
+
+      router.push("/");
+    }
+  }, [state]);
+
   return (
     <>
       <Heading title="Add a place" />
       <div className="w-full rounded-lg bg-white p-6 shadow-lg">
-        <form>
+        <form action={formAction}>
           <div className="mb-4">
             <label
               htmlFor="name"
