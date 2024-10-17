@@ -13,6 +13,11 @@ const PlacePage = async ({ params }) => {
     return <Heading title="Place not found" />;
   }
 
+  const bucketId = process.env.NEXT_PUBLIC_APPWRITE_STORAGE_BUCKET_PLACES;
+  const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT;
+  const imageUrl = `https://cloud.appwrite.io/v1/storage/buckets/${bucketId}/files/${place.image}/view?project=${projectId}`;
+  const imageSrc = place.image ? imageUrl : "/images/placeholder_img.jpg";
+
   return (
     <>
       <Heading title={place.name} />
@@ -26,7 +31,7 @@ const PlacePage = async ({ params }) => {
         </Link>
         <div className="flex flex-col sm:flex-row sm:space-x-6">
           <Image
-            src={`/images/${place.image}`}
+            src={imageSrc}
             alt={place.name}
             width={400}
             height={100}

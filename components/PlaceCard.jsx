@@ -2,11 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PlaceCard = ({ place }) => {
+  const bucketId = process.env.NEXT_PUBLIC_APPWRITE_STORAGE_BUCKET_PLACES;
+  const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT;
+  const imageUrl = `https://cloud.appwrite.io/v1/storage/buckets/${bucketId}/files/${place.image}/view?project=${projectId}`;
+  const imageSrc = place.image ? imageUrl : "/images/placeholder_img.jpg";
+
   return (
     <div className="mt-4 flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow sm:flex-row sm:items-center">
       <div className="flex flex-col sm:flex-row sm:space-x-4">
         <Image
-          src={`/images/${place.image}`}
+          src={imageSrc}
           width={400}
           height={100}
           alt={place.name}
