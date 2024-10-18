@@ -61,7 +61,7 @@ const PlacePage = async ({ params }) => {
             </ul>
           </div>
         </div>
-        <BookingForm />
+        <BookingForm place={place} />
       </div>
     </>
   );
