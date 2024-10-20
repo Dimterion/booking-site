@@ -8,7 +8,7 @@ const PlaceCard = ({ place }) => {
   const imageSrc = place.image ? imageUrl : "/images/placeholder_img.jpg";
 
   return (
-    <section className="mt-4 flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow sm:flex-row sm:items-center">
+    <section className="mt-4 flex flex-col items-start justify-between rounded-lg bg-gray-50 p-4 shadow sm:flex-row sm:items-center">
       <article className="flex flex-wrap items-center gap-4 sm:flex-row">
         <Image
           src={imageSrc}
@@ -17,21 +17,21 @@ const PlaceCard = ({ place }) => {
           alt={place.name}
           className="max-h-[200px] w-full max-w-[200px] rounded-lg object-cover sm:mb-0"
         />
-        <div className="space-y-1">
-          <h2 className="text-lg font-semibold">{place.name}</h2>
+        <section className="space-y-1">
+          <h2 className="text-xl font-semibold">{place.name}</h2>
           <p className="text-sm text-gray-600">
-            <span className="font-semibold text-gray-800"> Address: </span>
+            <span className="font-semibold text-gray-800">Address: </span>
             {place.address}
           </p>
           <p className="text-sm text-gray-600">
-            <span className="font-semibold text-gray-800"> Availability: </span>
+            <span className="font-semibold text-gray-800">Availability: </span>
             {place.availability}
           </p>
           <p className="text-sm text-gray-600">
-            <span className="font-semibold text-gray-800"> Price: </span>$
+            <span className="font-semibold text-gray-800">Price: </span>$
             {place.price_per_hour}
           </p>
-        </div>
+        </section>
       </article>
       <Link
         href={`/places/${place.$id}`}
