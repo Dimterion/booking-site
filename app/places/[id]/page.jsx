@@ -33,9 +33,9 @@ const PlacePage = async ({ params }) => {
           <Image
             src={imageSrc}
             alt={place.name}
-            width={400}
-            height={100}
-            className="h-64 w-full rounded-lg object-cover sm:w-1/3"
+            width={200}
+            height={200}
+            className="my-auto max-h-[200px] w-full max-w-[200px] rounded-lg object-cover sm:w-1/3"
           />
           <div className="mt-4 sm:mt-0 sm:flex-1">
             <p className="mb-4 text-gray-600">{place.description}</p>
@@ -57,6 +57,18 @@ const PlacePage = async ({ params }) => {
               <li>
                 <span className="font-semibold text-gray-800">Address: </span>
                 {place.address}
+              </li>
+              <li>
+                <span className="font-semibold text-gray-800">Amenities: </span>
+                {place.amenities}
+              </li>
+              <li>
+                <span className="font-semibold text-gray-800">Capacity: </span>
+                {place.capacity}
+              </li>
+              <li>
+                <span className="font-semibold text-gray-800">Location: </span>
+                {place.location}
               </li>
             </ul>
           </div>
