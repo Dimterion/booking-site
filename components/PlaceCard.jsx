@@ -18,7 +18,7 @@ const PlaceCard = ({ place }) => {
           className="max-h-[200px] w-full max-w-[200px] rounded-lg object-cover sm:mb-0"
         />
         <div className="space-y-1">
-          <h4 className="text-lg font-semibold">{place.name}</h4>
+          <h2 className="text-lg font-semibold">{place.name}</h2>
           <p className="text-sm text-gray-600">
             <span className="font-semibold text-gray-800"> Address: </span>
             {place.address}
@@ -33,14 +33,12 @@ const PlaceCard = ({ place }) => {
           </p>
         </div>
       </article>
-      <div className="mt-2 flex w-full flex-col sm:mt-0 sm:w-auto sm:flex-row sm:space-x-2">
-        <Link
-          href={`/places/${place.$id}`}
-          className="my-2 w-full rounded bg-blue-500 px-4 py-2 text-center text-white hover:bg-blue-700 sm:mb-0 sm:w-auto"
-        >
-          View Place
-        </Link>
-      </div>
+      <Link
+        href={`/places/${place.$id}`}
+        className="my-2 w-full rounded bg-blue-500 px-4 py-2 text-center text-white hover:bg-blue-700 sm:mb-0 sm:w-auto"
+      >
+        View place
+      </Link>
     </section>
   );
 };
