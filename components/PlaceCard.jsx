@@ -8,14 +8,14 @@ const PlaceCard = ({ place }) => {
   const imageSrc = place.image ? imageUrl : "/images/placeholder_img.jpg";
 
   return (
-    <div className="mt-4 flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow sm:flex-row sm:items-center">
-      <div className="flex flex-col sm:flex-row sm:space-x-4">
+    <section className="mt-4 flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow sm:flex-row sm:items-center">
+      <article className="flex flex-wrap items-center gap-4 sm:flex-row">
         <Image
           src={imageSrc}
-          width={400}
-          height={100}
+          width={200}
+          height={200}
           alt={place.name}
-          className="mb-3 w-full rounded-lg object-cover sm:mb-0 sm:h-32 sm:w-32"
+          className="max-h-[200px] w-full max-w-[200px] rounded-lg object-cover sm:mb-0"
         />
         <div className="space-y-1">
           <h4 className="text-lg font-semibold">{place.name}</h4>
@@ -32,16 +32,16 @@ const PlaceCard = ({ place }) => {
             {place.price_per_hour}
           </p>
         </div>
-      </div>
+      </article>
       <div className="mt-2 flex w-full flex-col sm:mt-0 sm:w-auto sm:flex-row sm:space-x-2">
         <Link
           href={`/places/${place.$id}`}
-          className="mb-2 w-full rounded bg-blue-500 px-4 py-2 text-center text-white hover:bg-blue-700 sm:mb-0 sm:w-auto"
+          className="my-2 w-full rounded bg-blue-500 px-4 py-2 text-center text-white hover:bg-blue-700 sm:mb-0 sm:w-auto"
         >
           View Place
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 
