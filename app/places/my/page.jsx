@@ -7,7 +7,7 @@ const MyPlacesPage = async () => {
 
   return (
     <>
-      <Heading title="My places" />
+      <Heading title="My places" number={places.length} />
       {places.length > 0
         ? places.map((place) => <MyPlaceCard key={place.$id} place={place} />)
         : "You have no listings."}
