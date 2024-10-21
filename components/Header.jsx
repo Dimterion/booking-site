@@ -85,14 +85,19 @@ const Header = () => {
               )}
               {isAuthenticated && (
                 <>
-                  <Link href="/places/my">
-                    <FaCompass className="mr-1 inline" /> My Places
+                  <Link
+                    className="flex items-center text-xs sm:text-base"
+                    href="/places/my"
+                  >
+                    <FaCompass className="mr-1 inline" />
+                    My places
                   </Link>
                   <button
                     onClick={handleLogout}
-                    className="mx-3 text-gray-800 hover:text-gray-600"
+                    className="mx-3 flex items-center text-xs text-gray-800 hover:text-gray-600 sm:text-base"
                   >
-                    <FaSignOutAlt className="mr-1 inline" /> Sign Out
+                    <FaSignOutAlt className="mr-1 inline" />
+                    Sign out
                   </button>
                 </>
               )}
