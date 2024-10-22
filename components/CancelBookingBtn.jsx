@@ -27,7 +27,7 @@ const CancelBookingBtn = ({ bookingId }) => {
   return (
     <button
       onClick={handleCancel}
-      className="w-full rounded bg-red-500 px-4 py-2 text-center text-white hover:bg-red-700 sm:w-auto"
+      className="w-full rounded bg-red-800 px-4 py-2 text-center text-white transition-colors hover:bg-red-900 sm:w-auto"
     >
       Cancel booking
     </button>

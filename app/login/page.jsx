@@ -66,13 +66,13 @@ const LoginPage = () => {
           <div className="flex flex-col gap-5">
             <button
               type="submit"
-              className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+              className="rounded bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
             >
               Login
             </button>
             <p>
               Don&apos;t have an account?{" "}
-              <Link href="/register" className="text-blue-500">
+              <Link href="/register" className="text-blue-600">
                 Register
               </Link>
               .

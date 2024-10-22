@@ -26,7 +26,7 @@ const DeletePlaceBtn = ({ placeId }) => {
   return (
     <button
       onClick={handleDelete}
-      className="mb-2 flex w-full min-w-28 items-center justify-center gap-1 rounded bg-red-800 px-4 py-2 text-center text-white hover:bg-red-900 sm:mb-0 sm:w-auto"
+      className="mb-2 flex w-full min-w-28 items-center justify-center gap-1 rounded bg-red-800 px-4 py-2 text-center text-white transition-colors hover:bg-red-900 sm:mb-0 sm:w-auto"
     >
       <FaTrash className="mr-1 inline" />
       Delete

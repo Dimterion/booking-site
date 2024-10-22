@@ -35,7 +35,7 @@ const PlaceCard = ({ place }) => {
       </article>
       <Link
         href={`/places/${place.$id}`}
-        className="my-2 w-full rounded bg-blue-800 px-4 py-2 text-center text-white hover:bg-blue-950 sm:mb-0 sm:w-auto"
+        className="my-2 w-full rounded bg-blue-800 px-4 py-2 text-center text-white transition-colors hover:bg-blue-950 sm:mb-0 sm:w-auto"
       >
         View place
       </Link>

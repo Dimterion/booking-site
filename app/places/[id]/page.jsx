@@ -24,7 +24,7 @@ const PlacePage = async ({ params }) => {
       <div className="rounded-lg bg-white p-6 shadow">
         <Link
           href="/"
-          className="mb-4 flex items-center text-gray-600 hover:text-gray-800"
+          className="mb-4 flex items-center text-gray-600 transition-colors hover:text-gray-800"
         >
           <FaChevronLeft className="mr-1 inline" />
           <span className="ml-2">Back to Places</span>

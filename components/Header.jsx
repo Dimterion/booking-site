@@ -42,7 +42,7 @@ const Header = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
                   href="/"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
                 >
                   Places
                 </Link>
@@ -50,13 +50,13 @@ const Header = () => {
                   <>
                     <Link
                       href="/bookings"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
                     >
                       Bookings
                     </Link>
                     <Link
                       href="/places/add"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
                     >
                       Add Place
                     </Link>
@@ -71,13 +71,13 @@ const Header = () => {
                 <>
                   <Link
                     href="/login"
-                    className="mr-3 text-gray-800 hover:text-gray-600"
+                    className="mr-3 text-gray-800 transition-colors hover:text-gray-600"
                   >
                     <FaSignInAlt className="mr-1 inline" /> Login
                   </Link>
                   <Link
                     href="/register"
-                    className="mr-3 text-gray-800 hover:text-gray-600"
+                    className="mr-3 text-gray-800 transition-colors hover:text-gray-600"
                   >
                     <FaUser className="mr-1 inline" /> Register
                   </Link>
@@ -86,7 +86,7 @@ const Header = () => {
               {isAuthenticated && (
                 <>
                   <Link
-                    className="flex items-center text-xs sm:text-base"
+                    className="flex items-center text-xs text-gray-800 transition-colors hover:text-gray-600 sm:text-base"
                     href="/places/my"
                   >
                     <FaCompass className="mr-1 inline" />
@@ -94,7 +94,7 @@ const Header = () => {
                   </Link>
                   <button
                     onClick={handleLogout}
-                    className="mx-3 flex items-center text-xs text-gray-800 hover:text-gray-600 sm:text-base"
+                    className="mx-3 flex items-center text-xs text-gray-800 transition-colors hover:text-gray-600 sm:text-base"
                   >
                     <FaSignOutAlt className="mr-1 inline" />
                     Sign out
@@ -109,7 +109,7 @@ const Header = () => {
         <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           <Link
             href="/"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
           >
             Places
           </Link>
@@ -117,13 +117,13 @@ const Header = () => {
             <>
               <Link
                 href="/bookings"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
               >
                 Bookings
               </Link>
               <Link
                 href="/places/add"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
               >
                 Add Place
               </Link>

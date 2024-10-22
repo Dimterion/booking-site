@@ -183,7 +183,7 @@ const AddPlacePage = () => {
           <div className="flex flex-col gap-5">
             <button
               type="submit"
-              className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+              className="rounded bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
             >
               Save
             </button>

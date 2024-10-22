@@ -90,13 +90,13 @@ const RegisterPage = () => {
           <div className="flex flex-col gap-5">
             <button
               type="submit"
-              className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+              className="rounded bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
             >
               Register
             </button>
             <p>
               Have an account?{" "}
-              <Link href="/login" className="text-blue-500">
+              <Link href="/login" className="text-blue-600">
                 Login
               </Link>
               .
