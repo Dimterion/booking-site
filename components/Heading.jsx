@@ -4,15 +4,11 @@ const Heading = ({ title, number }) => {
       <h1 className="text-2xl font-bold tracking-tight text-gray-900">
         {title}
       </h1>
-      <span
-        className={
-          number > 0
-            ? "text-2xl font-bold tracking-tight text-gray-900"
-            : "hidden"
-        }
-      >
-        : {number}
-      </span>
+      {number > 0 && (
+        <span className="text-2xl font-bold tracking-tight text-gray-900">
+          : {number}
+        </span>
+      )}
     </section>
   );
 };

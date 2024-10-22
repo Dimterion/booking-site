@@ -9,9 +9,9 @@ const MyPlaceCard = ({ place }) => {
       <section className="mt-2 flex w-full flex-col sm:mt-0 sm:w-auto sm:flex-row sm:space-x-2">
         <Link
           href={`/places/${place.$id}`}
-          className="mb-2 flex w-full min-w-28 items-center justify-center gap-1 rounded bg-blue-800 px-4 py-2 text-center text-white transition-colors hover:bg-blue-950 sm:mb-0 sm:w-auto"
+          className="mb-2 flex w-full min-w-40 items-center justify-center gap-2 rounded bg-blue-800 px-4 py-2 text-center text-white transition-colors hover:bg-blue-950 sm:mb-0 sm:w-auto"
         >
-          <FaEye className="mr-1 inline" />
+          <FaEye />
           View
         </Link>
         <DeletePlaceBtn placeId={place.$id} />
