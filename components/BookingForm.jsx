@@ -17,7 +17,7 @@ const BookingForm = ({ place }) => {
 
       router.push("/bookings");
     }
-  }, [state]);
+  }, [state, router]);
 
   return (
     <div className="mt-6">

@@ -18,7 +18,7 @@ const RegisterPage = () => {
 
       router.push("/login");
     }
-  }, [state]);
+  }, [state, router]);
 
   return (
     <div className="flex items-center justify-center">

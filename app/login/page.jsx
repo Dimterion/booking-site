@@ -22,7 +22,7 @@ const LoginPage = () => {
 
       router.push("/");
     }
-  }, [state]);
+  }, [state, setIsAuthenticated, router]);
 
   return (
     <div className="flex items-center justify-center">

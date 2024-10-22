@@ -18,7 +18,7 @@ const AddPlacePage = () => {
 
       router.push("/");
     }
-  }, [state]);
+  }, [state, router]);
 
   return (
     <>
