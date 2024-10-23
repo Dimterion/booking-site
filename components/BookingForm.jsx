@@ -20,7 +20,7 @@ const BookingForm = ({ place }) => {
   }, [state, router]);
 
   return (
-    <div className="mt-6">
+    <section className="mt-6">
       <h2 className="text-xl font-bold">Book this place</h2>
       <form action={formAction} className="mt-4">
         <input type="hidden" name="place_id" value={place.$id} />
@@ -30,7 +30,7 @@ const BookingForm = ({ place }) => {
               htmlFor="check_in_date"
               className="block text-sm font-medium text-gray-700"
             >
-              Check-In Date
+              Check-in date
             </label>
             <input
               type="date"
@@ -45,7 +45,7 @@ const BookingForm = ({ place }) => {
               htmlFor="check_in_time"
               className="block text-sm font-medium text-gray-700"
             >
-              Check-In Time
+              Check-in time
             </label>
             <input
               type="time"
@@ -60,7 +60,7 @@ const BookingForm = ({ place }) => {
               htmlFor="check_out_date"
               className="block text-sm font-medium text-gray-700"
             >
-              Check-Out Date
+              Check-out date
             </label>
             <input
               type="date"
@@ -75,7 +75,7 @@ const BookingForm = ({ place }) => {
               htmlFor="check_out_time"
               className="block text-sm font-medium text-gray-700"
             >
-              Check-Out Time
+              Check-out time
             </label>
             <input
               type="time"
@@ -86,16 +86,14 @@ const BookingForm = ({ place }) => {
             />
           </div>
         </div>
-        <div className="mt-6">
-          <button
-            type="submit"
-            className="flex w-full justify-center rounded-md border border-transparent bg-black px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2"
-          >
-            Book
-          </button>
-        </div>
+        <button
+          type="submit"
+          className="mt-6 flex w-full justify-center rounded-md border border-transparent bg-black px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2"
+        >
+          Book
+        </button>
       </form>
-    </div>
+    </section>
   );
 };
 
