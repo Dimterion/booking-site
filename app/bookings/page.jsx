@@ -9,7 +9,9 @@ const BookingsPage = async () => {
     <>
       <Heading title="My bookings" number={bookings.length} />
       {bookings.length === 0 ? (
-        <p className="mt-4 text-gray-600">You have no bookings.</p>
+        <p className="mt-6 text-center text-lg text-gray-600">
+          You have no bookings at the moment.
+        </p>
       ) : (
         bookings.map((booking) => (
           <BookedPlaceCard key={booking.$id} booking={booking} />

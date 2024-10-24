@@ -11,7 +11,9 @@ export default async function Home() {
       {places.length > 0 ? (
         places.map((place) => <PlaceCard key={place.$id} place={place} />)
       ) : (
-        <p>No places available at the moment.</p>
+        <p className="mt-6 text-center text-lg text-gray-600">
+          No places available at the moment.
+        </p>
       )}
     </>
   );
