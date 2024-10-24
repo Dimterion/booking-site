@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Booking Site",
-  description: "Booking site",
+  description:
+    "Book a meeting place or add your own place to book for meetings.",
 };
 
 export default function RootLayout({ children }) {
