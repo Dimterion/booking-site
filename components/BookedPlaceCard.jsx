@@ -21,17 +21,17 @@ const BookedPlaceCard = ({ booking }) => {
   };
 
   return (
-    <div className="mt-4 flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow sm:flex-row sm:items-center">
-      <div>
-        <h2 className="text-lg font-semibold">{place.name}</h2>
-        <p className="text-sm text-gray-600">
+    <section className="mt-4 flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow sm:flex-row sm:items-center">
+      <article>
+        <h2 className="mb-2 text-lg font-semibold">{place.name}</h2>
+        <p className="mb-1 text-sm text-gray-600">
           <strong>Check in:</strong> {formatDate(booking.check_in)}
         </p>
-        <p className="text-sm text-gray-600">
+        <p className="mb-1 text-sm text-gray-600">
           <strong>Check out:</strong> {formatDate(booking.check_out)}
         </p>
-      </div>
-      <div className="mt-2 flex w-full flex-col sm:mt-0 sm:w-auto sm:flex-row sm:space-x-2">
+      </article>
+      <article className="mt-2 flex w-full flex-col sm:mt-0 sm:w-auto sm:flex-row sm:space-x-2">
         <Link
           href={`/places/${place.$id}`}
           className="mb-2 flex w-full min-w-40 items-center justify-center gap-2 rounded bg-blue-800 px-4 py-2 text-center text-white transition-colors hover:bg-blue-950 sm:mb-0 sm:w-auto"
@@ -39,8 +39,8 @@ const BookedPlaceCard = ({ booking }) => {
           View place
         </Link>
         <CancelBookingBtn bookingId={booking.$id} />
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
