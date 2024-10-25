@@ -21,15 +21,15 @@ const PlacePage = async ({ params }) => {
   return (
     <>
       <Heading title={place.name} />
-      <div className="rounded-lg bg-white p-6 shadow">
+      <section className="rounded-lg bg-gray-50 p-6 shadow">
         <Link
           href="/"
           className="mb-4 flex items-center text-gray-600 transition-colors hover:text-gray-800"
         >
           <FaChevronLeft className="mr-1 inline" />
-          <span className="ml-2">Back to Places</span>
+          <span>Back to all places</span>
         </Link>
-        <div className="flex flex-col sm:flex-row sm:space-x-6">
+        <section className="flex flex-col sm:flex-row sm:space-x-6">
           <Image
             src={imageSrc}
             alt={place.name}
@@ -37,7 +37,7 @@ const PlacePage = async ({ params }) => {
             height={200}
             className="my-auto max-h-[200px] w-full max-w-[200px] rounded-lg object-cover sm:w-1/3"
           />
-          <div className="mt-4 sm:mt-0 sm:flex-1">
+          <article className="mt-4 sm:mt-0 sm:flex-1">
             <p className="mb-4 text-gray-600">{place.description}</p>
             <ul className="space-y-2">
               <li>
@@ -71,10 +71,10 @@ const PlacePage = async ({ params }) => {
                 {place.location}
               </li>
             </ul>
-          </div>
-        </div>
+          </article>
+        </section>
         <BookingForm place={place} />
-      </div>
+      </section>
     </>
   );
 };

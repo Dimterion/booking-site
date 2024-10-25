@@ -14,7 +14,7 @@ const AddPlacePage = () => {
   useEffect(() => {
     if (state.error) toast.error(state.error);
     if (state.success) {
-      toast.success("Place created successfully.");
+      toast.success("Place added successfully.");
 
       router.push("/");
     }
