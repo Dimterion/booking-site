@@ -14,6 +14,10 @@ const LoginPage = () => {
   const router = useRouter();
 
   useEffect(() => {
+    if (isAuthenticated) router.push("/");
+  }, [isAuthenticated, router]);
+
+  useEffect(() => {
     if (state.error) toast.error(state.error);
     if (state.success) {
       toast.success("Logged in successfully.");
