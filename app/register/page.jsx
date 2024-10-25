@@ -23,7 +23,7 @@ const RegisterPage = () => {
   return (
     <form
       action={formAction}
-      className="mx-auto mt-20 flex w-full max-w-sm flex-col items-center justify-center rounded-lg bg-white p-6 shadow-lg"
+      className="mx-auto mt-20 flex w-full max-w-sm flex-col items-center justify-center rounded-lg bg-gray-50 p-6 shadow-lg"
     >
       <h1 className="mb-6 text-center text-2xl font-bold text-gray-800">
         Register
