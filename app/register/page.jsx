@@ -5,11 +5,17 @@ import { useFormState } from "react-dom";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import createUser from "@/app/actions/createUser";
+import { useAuth } from "@/context/authContext";
 import Link from "next/link";
 
 const RegisterPage = () => {
   const [state, formAction] = useFormState(createUser, {});
+  const { isAuthenticated, setIsAuthenticated } = useAuth();
   const router = useRouter();
+
+  useEffect(() => {
+    if (isAuthenticated) router.push("/");
+  }, [isAuthenticated, router]);
 
   useEffect(() => {
     if (state.error) toast.error(state.error);
