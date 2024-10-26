@@ -6,20 +6,20 @@ import deletePlace from "@/app/actions/deletePlace";
 
 const DeletePlaceBtn = ({ placeId }) => {
   const handleDelete = async () => {
-    const confirmed = window.confirm(
-      "Are you sure you want to delete this place?",
-    );
+    if (!confirm("Are you sure you want to delete this place?")) {
+      return;
+    }
 
-    if (confirmed) {
-      try {
-        const response = await deletePlace(placeId);
+    try {
+      const result = await deletePlace(placeId);
 
+      if (result.success) {
         toast.success("Place deleted successfully.");
-      } catch (error) {
-        console.log("Could not delete place.", error);
-
-        toast.error("Could not delete place.");
       }
+    } catch (error) {
+      console.log("Could not delete place.", error);
+
+      toast.error("Could not delete place.");
     }
   };
 
