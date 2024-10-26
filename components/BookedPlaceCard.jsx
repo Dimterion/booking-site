@@ -21,7 +21,7 @@ const BookedPlaceCard = ({ booking }) => {
   };
 
   return (
-    <section className="mt-4 flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow sm:flex-row sm:items-center">
+    <section className="mt-4 flex flex-col items-start justify-between rounded-lg bg-gray-50 p-4 shadow sm:flex-row sm:items-center">
       <article>
         <h2 className="mb-2 text-lg font-semibold">{place.name}</h2>
         <p className="mb-1 text-sm text-gray-600">

@@ -4,7 +4,7 @@ import DeletePlaceBtn from "./DeletePlaceBtn";
 
 const MyPlaceCard = ({ place }) => {
   return (
-    <section className="mt-4 flex flex-col items-center justify-between rounded-lg bg-white p-4 shadow sm:flex-row">
+    <section className="mt-4 flex flex-col items-center justify-between rounded-lg bg-gray-50 p-4 shadow sm:flex-row">
       <h2 className="text-lg font-semibold">{place.name}</h2>
       <section className="mt-2 flex w-full flex-col sm:mt-0 sm:w-auto sm:flex-row sm:space-x-2">
         <Link

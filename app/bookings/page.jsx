@@ -8,14 +8,14 @@ const BookingsPage = async () => {
   return (
     <>
       <Heading title="My bookings" number={bookings.length} />
-      {bookings.length === 0 ? (
-        <p className="mt-6 text-center text-lg text-gray-600">
-          You have no bookings at the moment.
-        </p>
-      ) : (
+      {bookings.length > 0 ? (
         bookings.map((booking) => (
           <BookedPlaceCard key={booking.$id} booking={booking} />
         ))
+      ) : (
+        <p className="mt-6 text-center text-lg text-gray-600">
+          You have no bookings at the moment.
+        </p>
       )}
     </>
   );
