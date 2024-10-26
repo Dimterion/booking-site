@@ -8,14 +8,14 @@ const PlaceCard = ({ place }) => {
   const imageSrc = place.image ? imageUrl : "/images/placeholder_img.jpg";
 
   return (
-    <section className="mt-4 flex flex-col items-start justify-between rounded-lg bg-gray-50 p-4 shadow sm:flex-row sm:items-center">
+    <section className="mt-4 flex flex-col items-start justify-between rounded-md bg-gray-50 p-4 shadow sm:flex-row sm:items-center">
       <article className="flex flex-wrap items-center gap-4 sm:flex-row">
         <Image
           src={imageSrc}
           width={200}
           height={200}
           alt={place.name}
-          className="max-h-[200px] w-full max-w-[200px] rounded-lg object-cover sm:mb-0"
+          className="max-h-[200px] w-full max-w-[200px] rounded-md object-cover sm:mb-0"
         />
         <section className="space-y-1">
           <h2 className="text-xl font-semibold">{place.name}</h2>
@@ -35,7 +35,7 @@ const PlaceCard = ({ place }) => {
       </article>
       <Link
         href={`/places/${place.$id}`}
-        className="my-2 flex w-full min-w-40 items-center justify-center gap-2 rounded bg-blue-800 px-4 py-2 text-center text-white transition-colors hover:bg-blue-950 sm:mb-0 sm:w-auto"
+        className="my-2 flex w-full min-w-40 items-center justify-center gap-2 rounded-md bg-blue-800 px-4 py-2 text-center text-white transition-colors hover:bg-blue-950 sm:mb-0 sm:w-auto"
       >
         View place
       </Link>

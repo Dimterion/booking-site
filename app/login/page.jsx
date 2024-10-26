@@ -31,7 +31,7 @@ const LoginPage = () => {
   return (
     <form
       action={formAction}
-      className="mx-auto mt-20 flex w-full max-w-sm flex-col items-center justify-center rounded-lg bg-gray-50 p-6 shadow-lg"
+      className="mx-auto mt-20 flex w-full max-w-sm flex-col items-center justify-center rounded-md bg-gray-50 p-6 shadow-lg"
     >
       <h1 className="mb-6 text-center text-2xl font-bold text-gray-800">
         Login
@@ -44,7 +44,7 @@ const LoginPage = () => {
           type="email"
           id="email"
           name="email"
-          className="w-full rounded border px-3 py-2"
+          className="w-full rounded-md border px-3 py-2"
           autoComplete="email"
           required
         />
@@ -60,7 +60,7 @@ const LoginPage = () => {
           type="password"
           id="password"
           name="password"
-          className="w-full rounded border px-3 py-2"
+          className="w-full rounded-md border px-3 py-2"
           autoComplete="password"
           required
         />
@@ -68,7 +68,7 @@ const LoginPage = () => {
       <section className="flex w-full flex-col gap-5">
         <button
           type="submit"
-          className="rounded bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
+          className="rounded-md bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
         >
           Login
         </button>

@@ -29,7 +29,7 @@ const RegisterPage = () => {
   return (
     <form
       action={formAction}
-      className="mx-auto mt-20 flex w-full max-w-sm flex-col items-center justify-center rounded-lg bg-gray-50 p-6 shadow-lg"
+      className="mx-auto mt-20 flex w-full max-w-sm flex-col items-center justify-center rounded-md bg-gray-50 p-6 shadow-lg"
     >
       <h1 className="mb-6 text-center text-2xl font-bold text-gray-800">
         Register
@@ -42,7 +42,7 @@ const RegisterPage = () => {
           type="text"
           id="name"
           name="name"
-          className="w-full rounded border px-3 py-2"
+          className="w-full rounded-md border px-3 py-2"
           required
         />
       </article>
@@ -54,7 +54,7 @@ const RegisterPage = () => {
           type="email"
           id="email"
           name="email"
-          className="w-full rounded border px-3 py-2"
+          className="w-full rounded-md border px-3 py-2"
           required
         />
       </article>
@@ -69,7 +69,7 @@ const RegisterPage = () => {
           type="password"
           id="password"
           name="password"
-          className="w-full rounded border px-3 py-2"
+          className="w-full rounded-md border px-3 py-2"
           required
         />
       </article>
@@ -84,14 +84,14 @@ const RegisterPage = () => {
           type="password"
           id="confirm-password"
           name="confirm-password"
-          className="w-full rounded border px-3 py-2"
+          className="w-full rounded-md border px-3 py-2"
           required
         />
       </article>
       <section className="flex w-full flex-col gap-5">
         <button
           type="submit"
-          className="rounded bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
+          className="rounded-md bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
         >
           Register
         </button>

@@ -25,7 +25,7 @@ const AddPlacePage = () => {
       <Heading title="Add a place" />
       <form
         action={formAction}
-        className="w-full rounded-lg bg-gray-50 p-6 shadow-lg"
+        className="w-full rounded-md bg-gray-50 p-6 shadow-lg"
       >
         <article className="mb-4">
           <label htmlFor="name" className="mb-2 block font-bold text-gray-700">
@@ -35,7 +35,7 @@ const AddPlacePage = () => {
             type="text"
             id="name"
             name="name"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="Enter place name"
             required
           />
@@ -50,7 +50,7 @@ const AddPlacePage = () => {
           <textarea
             id="description"
             name="description"
-            className="h-24 w-full rounded border px-3 py-2"
+            className="h-24 w-full rounded-md border px-3 py-2"
             placeholder="Enter place description"
             required
           ></textarea>
@@ -63,7 +63,7 @@ const AddPlacePage = () => {
             type="number"
             id="sq"
             name="sq"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="Enter place size"
             required
           />
@@ -79,7 +79,7 @@ const AddPlacePage = () => {
             type="number"
             id="capacity"
             name="capacity"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="Number of people"
             required
           />
@@ -95,7 +95,7 @@ const AddPlacePage = () => {
             type="number"
             id="price_per_hour"
             name="price_per_hour"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="Enter price per hour"
             required
           />
@@ -111,7 +111,7 @@ const AddPlacePage = () => {
             type="text"
             id="address"
             name="address"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="Enter full address"
             required
           />
@@ -127,7 +127,7 @@ const AddPlacePage = () => {
             type="text"
             id="location"
             name="location"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="Location (building, floor, etc.)"
             required
           />
@@ -143,7 +143,7 @@ const AddPlacePage = () => {
             type="text"
             id="availability"
             name="availability"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="Availability (e.g., Monday - Friday, 9 AM - 5 PM)"
             required
           />
@@ -159,7 +159,7 @@ const AddPlacePage = () => {
             type="text"
             id="amenities"
             name="amenities"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
             placeholder="List of amenities"
             required
           />
@@ -172,12 +172,12 @@ const AddPlacePage = () => {
             type="file"
             id="image"
             name="image"
-            className="w-full rounded border px-3 py-2"
+            className="w-full rounded-md border px-3 py-2"
           />
         </article>
         <button
           type="submit"
-          className="w-full rounded bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
+          className="w-full rounded-md bg-blue-800 px-4 py-2 text-white transition-colors hover:bg-blue-950"
         >
           Save
         </button>

@@ -21,7 +21,7 @@ const PlacePage = async ({ params }) => {
   return (
     <>
       <Heading title={place.name} />
-      <section className="rounded-lg bg-gray-50 p-6 shadow">
+      <section className="rounded-md bg-gray-50 p-6 shadow">
         <Link
           href="/"
           className="mb-4 flex items-center text-gray-600 transition-colors hover:text-gray-800"
@@ -35,7 +35,7 @@ const PlacePage = async ({ params }) => {
             alt={place.name}
             width={200}
             height={200}
-            className="my-auto max-h-[200px] w-full max-w-[200px] rounded-lg object-cover sm:w-1/3"
+            className="my-auto max-h-[200px] w-full max-w-[200px] rounded-md object-cover sm:w-1/3"
           />
           <article className="mt-4 sm:mt-0 sm:flex-1">
             <p className="mb-4 text-gray-600">{place.description}</p>
