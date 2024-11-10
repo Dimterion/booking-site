@@ -1,6 +1,6 @@
 <img src="./assets/images/booking-site_readme_header.svg" alt="Booking Site readme header" />
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 # Booking Site
 
@@ -15,7 +15,7 @@ Next.js / JavaScript application
 
 ## <a id="introduction"></a>🔎 Introduction
 
-Booking Site is a full-stack application designed to book various places.
+Booking Site is a full-stack application to book various places.
 
 ## <a id="features"></a>📌 Features
 
