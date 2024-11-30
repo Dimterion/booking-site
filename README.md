@@ -40,7 +40,7 @@ Booking Site is a full-stack application to book various places.
 ### Bio Link ⬇️
 
 <a href="https://dimterion.bio.link/">
-  <img src="./assets/images/booking_site_readme_footer.svg" alt="Booking Site readme header" />
+  <img src="https://raw.githubusercontent.com/Dimterion/Dimterion/1521172f216f8f90db6b3b986c1cbb19994847eb/images/bio_link_image.svg" alt="Dimterion Bio Link Image" />
 </a>
 
 **Note:** Ctrl+Click (Windows/Linux) or Cmd+Click (macOS) the image to open link in a new tab.
