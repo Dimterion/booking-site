@@ -1,6 +1,6 @@
 export default function About({ links, stats }) {
   return (
-    <section className="relative isolate overflow-hidden bg-gray-700 py-24 sm:py-32">
+    <section className="relative isolate overflow-hidden rounded-md bg-gray-700 py-24 sm:py-32">
       <div
         aria-hidden="true"
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -25,35 +25,35 @@ export default function About({ links, stats }) {
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-white to-[#776fff] opacity-20"
         />
       </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <article className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
             About
           </h2>
           <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
             Find out more about the app.
           </p>
-        </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+        </section>
+        <section className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <article className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a key={link.name} href={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
             ))}
-          </div>
+          </article>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse gap-1">
+              <article key={stat.name} className="flex flex-col-reverse gap-1">
                 <dt className="text-base/7 text-gray-300">{stat.name}</dt>
                 <dd className="text-4xl font-semibold tracking-tight text-white">
                   {stat.value}
                 </dd>
-              </div>
+              </article>
             ))}
           </dl>
-        </div>
-      </div>
+        </section>
+      </article>
     </section>
   );
 }
