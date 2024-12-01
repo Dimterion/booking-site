@@ -1,25 +1,26 @@
 import Link from "next/link";
-import { FaArrowLeft } from "react-icons/fa";
 
 export default function NotFound() {
   return (
-    <section className="mx-auto max-w-max px-8 py-12 sm:flex sm:py-24">
-      <p className="text-4xl font-bold sm:text-5xl">404</p>
-      <section className="sm:ml-6">
-        <article className="sm:border-l sm:border-gray-200 sm:pl-6">
-          <h1 className="text-4xl font-bold sm:text-5xl">Page not found.</h1>
-          <p className="mt-4 text-base">Please check the link and try again.</p>
-        </article>
-        <article className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-3 font-medium text-gray-800 transition-colors hover:text-gray-600"
-          >
-            <FaArrowLeft />
-            Home page
-          </Link>
-        </article>
+    <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <p className="text-base font-semibold text-blue-800">404</p>
+      <h1 className="mt-4 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+        Page not found
+      </h1>
+      <p className="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+        Please check the link and try again.
+      </p>
+      <section className="mt-10 flex items-center justify-center gap-x-6">
+        <Link
+          href="/"
+          className="rounded-md bg-blue-800 p-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Home page
+        </Link>
+        <a href="#" className="text-sm font-semibold text-gray-900">
+          Contact <span aria-hidden="true">&rarr;</span>
+        </a>
       </section>
-    </section>
+    </main>
   );
 }
