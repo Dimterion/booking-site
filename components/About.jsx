@@ -1,17 +1,4 @@
-const links = [
-  { name: "Web Site", href: "#" },
-  { name: "GitHub", href: "#" },
-  { name: "Contacts", href: "#" },
-  { name: "LinkedIn", href: "#" },
-];
-const stats = [
-  { name: "Lorem", value: "10" },
-  { name: "Lorem", value: "10+" },
-  { name: "Lorem", value: "20" },
-  { name: "Lorem", value: "Lorem Ipsum" },
-];
-
-export default function About() {
+export default function About({ links, stats }) {
   return (
     <section className="relative isolate overflow-hidden bg-gray-700 py-24 sm:py-32">
       <div
