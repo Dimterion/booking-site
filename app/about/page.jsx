@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Logos from "@/components/Logos";
+import Stats from "@/components/Stats";
 
 export default async function AboutPage() {
   const links = [
@@ -19,6 +20,7 @@ export default async function AboutPage() {
     <>
       <About links={links} stats={stats} />
       <Logos />
+      <Stats />
     </>
   );
 }
