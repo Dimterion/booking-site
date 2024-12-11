@@ -41,7 +41,7 @@ const Header = () => {
             <div className="hidden sm:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
-                  href="/"
+                  href="/places"
                   className="rounded-md p-2 font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
                 >
                   Places
