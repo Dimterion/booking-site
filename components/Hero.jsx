@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <section className="px-6 pt-14 lg:px-8">
@@ -16,11 +18,11 @@ const Hero = () => {
       <section className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <article className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Book your place.{" "}
-            <a href="#" className="font-semibold text-blue-800">
+            Add your place.{" "}
+            <Link href="/places/add" className="font-semibold text-blue-800">
               <span aria-hidden="true" className="absolute inset-0" />
               Read more <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </article>
         <article className="text-center">
@@ -31,15 +33,18 @@ const Hero = () => {
             Check all of the available places to book.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
+            <Link
+              href="/places"
               className="rounded-md bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Get started
-            </a>
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm/6 font-semibold text-gray-900"
+            >
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </article>
       </section>
