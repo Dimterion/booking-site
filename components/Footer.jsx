@@ -2,7 +2,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mx-auto flex max-w-7xl flex-wrap justify-center p-6 text-sm text-gray-600">
+    <footer className="mx-auto flex w-full flex-wrap justify-center bg-gray-100 p-6 text-sm text-gray-800">
       <p className="">&copy; {currentYear} Booking Site. Made by</p>
       <a
         href="https://github.com/Dimterion"
