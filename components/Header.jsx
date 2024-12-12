@@ -46,6 +46,18 @@ const Header = () => {
                 >
                   Places
                 </Link>
+                <Link
+                  href="/about"
+                  className="rounded-md p-2 font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/contact"
+                  className="rounded-md p-2 font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white"
+                >
+                  Contact
+                </Link>
                 {isAuthenticated && (
                   <>
                     <Link
@@ -108,10 +120,22 @@ const Header = () => {
       <div className="sm:hidden">
         <div className="flex flex-wrap items-center justify-center px-2 pb-3 pt-2 sm:px-3">
           <Link
-            href="/"
+            href="/places"
             className="block rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white sm:text-base"
           >
             Places
+          </Link>
+          <Link
+            href="/about"
+            className="block rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white sm:text-base"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            className="block rounded-md px-3 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-700 hover:text-white sm:text-base"
+          >
+            Contact
           </Link>
           {isAuthenticated && (
             <>
