@@ -23,7 +23,7 @@ const PlacePage = async ({ params }) => {
       <Heading title={place.name} />
       <section className="rounded-md bg-gray-50 p-6 shadow">
         <Link
-          href="/"
+          href="/places"
           className="mb-4 flex items-center text-gray-600 transition-colors hover:text-gray-800"
         >
           <FaChevronLeft className="mr-1 inline" />

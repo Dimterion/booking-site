@@ -1,6 +1,6 @@
 export default function About({ links, stats }) {
   return (
-    <section className="relative isolate overflow-hidden rounded-md bg-gray-700 py-24 sm:py-32">
+    <section className="relative isolate overflow-hidden rounded-md bg-gray-100 py-24 sm:py-32">
       <div
         aria-hidden="true"
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -27,15 +27,15 @@ export default function About({ links, stats }) {
       </div>
       <article className="mx-auto max-w-7xl px-6 lg:px-8">
         <section className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+          <h2 className="text-5xl font-semibold tracking-tight text-gray-800 sm:text-7xl">
             About
           </h2>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+          <p className="mt-8 text-pretty text-lg font-medium text-gray-700 sm:text-xl/8">
             Find out more about the app.
           </p>
         </section>
         <section className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <article className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          <article className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-gray-700 sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a key={link.name} href={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
@@ -45,8 +45,8 @@ export default function About({ links, stats }) {
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <article key={stat.name} className="flex flex-col-reverse gap-1">
-                <dt className="text-base/7 text-gray-300">{stat.name}</dt>
-                <dd className="text-4xl font-semibold tracking-tight text-white">
+                <dt className="text-base/7 text-gray-700">{stat.name}</dt>
+                <dd className="text-4xl font-semibold tracking-tight text-gray-700">
                   {stat.value}
                 </dd>
               </article>
