@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../assets/images/logo.png";
+import avatar from "../public/images/placeholder_img.jpg";
 
 export default function Contacts() {
   return (
@@ -8,8 +9,8 @@ export default function Contacts() {
       <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <Image
-          width={100}
-          height={100}
+          width={50}
+          height={50}
           alt=""
           src={logo}
           className="mx-auto h-12"
@@ -26,8 +27,8 @@ export default function Contacts() {
             <Image
               width={100}
               height={100}
-              alt=""
-              src={logo}
+              alt="Avatar"
+              src={avatar}
               className="mx-auto size-10 rounded-full"
             />
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
