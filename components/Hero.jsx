@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
       <section className="mx-auto max-w-2xl py-1 sm:py-40">
         <article className="text-center">
-          <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+          <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-800 sm:text-7xl">
             Booking App
           </h1>
           <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
@@ -32,18 +32,18 @@ const Hero = () => {
             </Link>
             <Link
               href="/about"
-              className="text-sm/6 font-semibold text-gray-900"
+              className="text-sm/6 font-semibold text-gray-800 transition-colors hover:text-gray-600"
             >
               Learn more <span aria-hidden="true">→</span>
             </Link>
           </div>
         </article>
         <article className="my-8 flex justify-center text-center">
-          <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Add your place.{" "}
+          <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-800 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            Add your place{" "}
             <Link href="/places/add" className="font-semibold text-blue-800">
               <span aria-hidden="true" className="absolute inset-0" />
-              Read more <span aria-hidden="true">&rarr;</span>
+              here <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </article>
