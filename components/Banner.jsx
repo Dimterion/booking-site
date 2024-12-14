@@ -34,8 +34,8 @@ export default function Banner() {
               className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-blue-800 to-[#9089fc] opacity-30"
             />
           </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <p className="text-sm/6 text-gray-900">
+          <article className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className="text-sm text-gray-900">
               <strong className="font-semibold">Lorem</strong>
               <svg
                 viewBox="0 0 2 2"
@@ -52,8 +52,8 @@ export default function Banner() {
             >
               Lorem <span aria-hidden="true">&rarr;</span>
             </a>
-          </div>
-          <div className="flex flex-1 justify-end">
+          </article>
+          <section className="flex flex-1 justify-end">
             <button
               type="button"
               className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
@@ -65,7 +65,7 @@ export default function Banner() {
                 className="size-5 text-gray-800 hover:text-gray-600"
               />
             </button>
-          </div>
+          </section>
         </section>
       )}
     </>
