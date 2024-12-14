@@ -1,8 +1,9 @@
 import About from "@/components/About";
+import Banner from "@/components/Banner";
 import Logos from "@/components/Logos";
 import Stats from "@/components/Stats";
 
-export default async function AboutPage() {
+export default function AboutPage() {
   const links = [
     { name: "Web Site", href: "#" },
     { name: "GitHub", href: "#" },
@@ -18,6 +19,7 @@ export default async function AboutPage() {
 
   return (
     <>
+      <Banner />
       <About links={links} stats={stats} />
       <Logos />
       <Stats />
