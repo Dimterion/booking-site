@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import AuthWrapper from "@/components/AuthWrapper";
 import { ToastContainer } from "react-toastify";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={`${inter.className} flex min-h-screen flex-col`}>
           <Header />
+          <Banner />
           <main className="mx-auto w-full max-w-7xl flex-grow px-4 sm:px-6 lg:px-8">
             {children}
           </main>
